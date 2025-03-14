@@ -1,0 +1,34 @@
+{%extends  'base.html'%}
+
+
+{%block content%}
+<style>
+    .profile{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+<h1>{{user.username}}</h1>
+
+<div class="profile">
+    <div>
+        {% include 'topic_comp.html'%}
+    </div>
+    
+    <div>
+        {%include 'feed.html'%}   
+    </div>
+
+
+    
+<div>
+     {%include 'activity_comp.html'%}
+       
+    </div>
+    
+
+    
+</div>
+
+
+{%endblock%}
